@@ -166,28 +166,33 @@ main {
 }
 
 /* CSS for home page */
-
+.about-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .about {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 20px;
+  padding-top: 100px;
   /* background-color: #ffffff;
   border: 1px solid #ccc; */
   border-radius: 5px;
-  max-width: 800px;
+  max-width: 1000px;
   /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
 }
 
 .about-image img {
-  max-width: 300px;
+  max-width: 400px;
   border-radius: 3px;
+  margin-right: 70px;
   /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
 }
 
 .about-text {
   flex: 1;
-  margin-left: 50px;
 }
 
 .about-text h2 {
