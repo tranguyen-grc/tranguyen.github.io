@@ -1,7 +1,7 @@
 :root {
   /* variables */
   --cg-black: rgb(30, 32, 32);
-  --cg-blue: rgb(36, 94, 255);
+  --cg-blue: rgb(57, 134, 130);
   --cg-grey: rgb(243, 243, 243);
   --cg-white: rgb(255, 255, 255);
 }
@@ -16,10 +16,18 @@ body {
   min-height: 100vh;
   padding: 0;
   margin: 0;
-  font-family: monospace;
+  font-family: "Hind";
 }
 
 /* CSS for navigation */
+
+.h1, .h2, .h3 {
+  font-family: "IBM Plex Sans";
+}
+
+.p {
+  font-family: "Hind";
+}
 
 .navbar {
   position: -webkit-sticky;
@@ -34,8 +42,8 @@ body {
   align-items: center;
   text-align: center;
 
-  background-color: var(--cg-black);
-  color: var(--cg-white);
+  background-color: var(--cg-grey);
+  color: var(--cg-black);
   padding: 0px 0px;
 
   /* Debug border */
@@ -54,18 +62,16 @@ body {
 }
 
 .navbar a {
-  color: var(--cg-white);
-  font-weight: bold;
+  color: var(--cg-black);
+  font-weight: 600;
   margin: 0 12px;
   text-decoration: none;
-  letter-spacing: 2px;
-
-  font-family: monospace;
+  letter-spacing: 1px;
+  font-family: "IBM Plex Sans";
 }
 
 .navbar a:hover {
   color: var(--cg-blue);
-  text-decoration: underline;
 }
 
 .navbar a:active {
@@ -73,7 +79,8 @@ body {
 }
 
 .logo a {
-  font-family: Georgia;
+  font-family: "IBM Plex Sans";
+  margin-left: 40px;
 }
 
 .logo a:hover {
@@ -92,7 +99,7 @@ main {
   display: flex;
   justify-content: center;
   font-size: 40px;
-  font-family: Georgia;
+  font-family: "IBM Plex Sans";
 }
 
 /* CSS for portfolio grid */
@@ -102,21 +109,15 @@ main {
   flex-direction: row;
   max-width: 100%;
   margin: 1em 0 2em 0;
+  justify-content: center;
 
   /* Debug border */
   /* border: 2px solid blue; */
 }
 
-.item-link {
-  width: 70%;
-
-  /* Debug border */
-  /* border: 2px solid red; */
-}
-
 .project-image {
   object-fit: cover;
-  width: 100%;
+  width: 500px;
   height: 500px;
   flex-basis: 50px;
   flex-grow: 2;
@@ -128,7 +129,7 @@ main {
 .project-details {
   display: flex;
   background-color: var(--cg-white);
-  width: 30%;
+  width: 300px;
   height: 500px;
   flex-shrink: 1;
   padding: 0 20px;
@@ -139,6 +140,7 @@ main {
   flex-direction: column;
   text-align: center;
   justify-content: center;
+  align-items: center;
 
   /* Debug border */
   /* border: 2px solid green; */
@@ -149,11 +151,15 @@ main {
   text-decoration: none;
   font-weight: bold;
   letter-spacing: 1px;
+  width: 35%;
+  padding: 10px;
+  border-radius: 7px;
+  background-color: var(--cg-grey);
 }
 
 .project-details a:hover {
-  color: var(--cg-blue);
-  text-decoration: underline;
+  background-color: var(--cg-black);
+  color: var(--cg-grey);
 }
 
 .project-details {
@@ -177,16 +183,12 @@ main {
   justify-content: space-between;
   padding: 20px;
   padding-top: 100px;
-  /* background-color: #ffffff;
-  border: 1px solid #ccc; */
-  border-radius: 5px;
   max-width: 1000px;
   /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
 }
 
 .about-image img {
   max-width: 400px;
-  border-radius: 3px;
   margin-right: 70px;
   /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
 }
@@ -208,52 +210,93 @@ main {
 /* CSS for resume page */
 
 .button {
-  background-color: var(--cg-black);
-  border: none;
-  color: var(--cg-white);
-
-  font-family: monospace;
-
-  padding: 5px 7px;
+  color: var(--cg-black);
+  font-size: 16px;
+  text-decoration: none;
   text-align: center;
-
-  border-radius: 2px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  width: 10%;
+  padding: 20px;
+  border-radius: 7px;
+  background-color: var(--cg-grey);
 }
 
 .button:hover {
-  background-color: var(--cg-blue);
+  color: var(--cg-blue);
+  cursor: pointer;
+}
+
+.resume {
+  width: 50%;
+  background-color: var(--cg-white);
+  padding: 50px;
+  /* border-radius: 20px; */
 }
 
 .resume h2 {
-  font-family: Georgia;
+  font-family: "IBM Plex Sans";
 }
 
-/* CSS for contact form */
-
-label {
-  display: block;
-  margin-bottom: 8px;
-  font-family: Georgia;
-  font-weight: bold;
+.resume h3 {
+  font-family: "IBM Plex Sans";
+  font-weight: 600;
 }
 
-input[type="text"],
-input[type="email"],
-textarea {
-  width: 100%;
+.resume-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.resume-link-group {
+  flex-direction: row;
+  margin: 2px 0;
+}
+
+.resume-links a {
+  color: var(--cg-blue);
+  padding: 3px;
+}
+
+.resume ul {
+  padding-left: 20px; /* Create space for bullets */
+}
+
+.resume li {
+  margin: 5px 0; /* Adjust margin for spacing */
+  padding-left: 10px; /* Indent the second and subsequent lines */
+  list-style-position: outside; /* Ensure the bullet is outside the list item */
+}
+
+.section {
   padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-  resize: none;
 }
 
-/* Add some spacing to the form */
-form {
-  width: 500px;
-  margin: 0 auto;
+.section-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
 }
+
+.two-part {
+  display: flex; /* Enable flexbox to arrange items in a row */
+  justify-content: space-between; /* Adds space between the two sections */
+  align-items: flex-start; /* Aligns the items to the top */
+}
+
+.left-section{
+  width: 20%;
+}
+
+.right-section {
+  width: 70%;
+}
+
+.left-section p, .right-section p {
+  margin: 5px 0; /* Optional: Adjust margin for paragraphs */
+}
+
+
 
 /* CSS for footer */
 
@@ -261,10 +304,85 @@ form {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--cg-black);
-  color: var(--cg-white);
+  background-color: var(--cg-grey);
+  color: var(--cg-black);
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 2.5rem;
 }
+
+/* CSS for contact*/
+
+form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 16px;
+  background-color: #FFF;
+  padding: 32px;
+  /* border-radius: 16px; */
+  width: 500px;
+  margin: 0 auto;
+  box-sizing: border-box; /* Ensure the padding is included in the form's width */
+}
+
+.form-group {
+  &.full {
+    grid-column: 1 / -1;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: #888;
+    font-size: 14px;
+    font-family: "Hind";
+  }
+}
+
+.form-element {
+  appearance: none;
+  outline: none;
+  border: none;
+
+  display: block;
+  width: 100%; /* Ensure input takes up the full width of the container */
+  max-width: 100%; /* Prevent overflow */
+  
+  box-sizing: border-box; /* Include padding in the width */
+  border-radius: 8px;
+  padding: 12px 16px;
+  background-color: #F3F3F3;
+  transition: 0.4s;
+
+  &:focus {
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+    background-color: #FFF;
+  }
+}
+
+.submit-group {
+  grid-column: 1 / -1;
+  text-align: right;
+}
+
+input[type="submit"] {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+
+  padding: 12px 16px;
+  background-color: var(--cg-black);
+  border-radius: 8px;
+  color: var(--cg-white);
+  cursor: pointer;
+  transition: 0.4s;
+  font-family: "IBM Plex Sans";
+  letter-spacing: 1px;
+
+  &:hover {
+    background-color: var(--cg-blue);
+  }
+}
+
